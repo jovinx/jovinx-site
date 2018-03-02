@@ -1,0 +1,68 @@
+
+body {
+    background: rgba(0,0,0,0.03);
+}
+
+.input-group, .form-group {
+    margin: 10px 0;
+}
+#service_request_form .input-group-addon {
+    color: white;
+    font-weight: bold;
+    background: dodgerblue;
+    border: none;
+    font-size: 12px;
+}
+#message_form .input-group-addon {
+    color: white;
+    font-weight: bold;
+    background: rgb(255, 111, 58);
+    border: none;
+    font-size: 12px;
+}
+#service_request_form .form-control {
+    background: white;
+    color: gray;
+    font-size: 14px;
+    border-color: dodgerblue;
+}
+#message_form .form-control {
+    background: white;
+    color: gray;
+    font-size: 14px;
+    border-color: rgb(255, 111, 58);
+}
+header#header  {
+    position: relative;
+
+}
+header #opening-hours {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -90px;
+}
+header #opening-hours .well {
+    width: 270px;
+    background: white;
+    height: 130px;
+    color: black;
+    margin: 0 auto;
+    border: 0;
+    box-shadow: 0 5px 10px 3px rgba(0,0,0,0.05)
+}
+header #opening-hours .well h4 {
+    color: gray;
+}
+header #opening-hours .well i {
+    color: rgb(3, 198, 3);
+}
+
+
+section#forms {
+    padding: 150px 0;
+}
+
+#forms #contact-btns {
+    margin-top: 50px;
+}

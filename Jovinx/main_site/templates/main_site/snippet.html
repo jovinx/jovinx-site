@@ -1,0 +1,44 @@
+<div style="overflow-x: auto; white-space: nowrap">
+    {% for reason in reasons %}
+        <div style="display: inline-block; width: 300px; margin-right: 50px" class="well">
+            <h3 style="white-space: normal"><i class="fa fa-dot-circle-o fa-sm" aria-hidden="true"></i> {{reason.title}}</h3>
+            <br>
+            <p style="white-space: normal"> {{reason.description }}</p>
+            <br>
+            <i class="fa fa-diamond darkblue" aria-hidden="true"></i>
+            <i class="fa fa-diamond lightblue" aria-hidden="true"></i>
+            <i class="fa fa-diamond orange" aria-hidden="true"></i>
+        </div>
+    {% endfor %}
+
+</div> <!--for services-->
+
+
+<div class="slide-wrapper">
+
+    <div class="owl-carousel" id="why-jovinx-slide">
+        {% for reason in reasons %}
+            <div class="well item">
+                <h3><i class="fa fa-dot-circle-o fa-sm" aria-hidden="true"></i> {{reason.title}}</h3>
+                
+                <p> {{reason.description }}</p>
+                <div id="icon-container">
+                    <i class="fa fa-diamond darkblue" aria-hidden="true"></i>
+                    <i class="fa fa-diamond lightblue" aria-hidden="true"></i>
+                    <i class="fa fa-diamond orange" aria-hidden="true"></i>
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+    <div class="slide-navs">
+        <i class="prev fa fa-arrow-left  fa-2x slider-btn" aria-hidden="true"></i>
+        <i class="next fa fa-arrow-right fa-2x  slider-btn" aria-hidden="true"></i>
+    </div>
+
+</div>
+
+<div style="margin-top: 40px;" class="section-call-to-action row text-center">
+    <a class="btn btn-primary" href="/contact">LET'S DO BUSINESS</a>
+</div>

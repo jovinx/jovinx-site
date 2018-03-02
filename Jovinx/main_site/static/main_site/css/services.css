@@ -1,0 +1,70 @@
+
+
+section#service-list {
+    padding: 100px 0 40px;
+    background: rgba(0,0,0,0.05);
+}
+
+#service-list .thumbnail.service {
+    padding: 0;
+    border: 0;
+    box-shadow: 0 1px 1px 0px rgba(0,0,0,0.2);
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(max-width: 992px ) and (min-width: 768px) {
+    #service-list .thumbnail.service {
+        width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+#service-list .thumbnail.service h3 {
+    color: rgba(0,0,0,0.5);
+    font-size: 14px;
+    margin: 0;
+    padding: 10px 10px;
+    font-weight: bold;
+}
+#service-list .thumbnail.service h3 i {
+    color: white;
+    background: dodgerblue;
+    line-height: 21px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    font-size: 13px;
+    text-align: center;
+}
+#service-list .thumbnail.service img {
+    height: 130px;
+    width: 100%;
+}
+#service-list .thumbnail.service .caption p {
+    font-size: 14px;
+    color: rgba(0,0,0,0.6);
+}
+#service-list .thumbnail.service .caption{
+    padding-bottom: 0 !important;
+}
+#service-list .thumbnail.service .btn-container {
+    padding: 5px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+#service-list .thumbnail.service .btn-container .btn-primary {
+    border: 1px solid transparent;
+    background: dodgerblue;
+    font-weight: 700;
+    font-size: 12px;
+    color: white;
+    border-radius: 26px;
+    padding: 3px 8px !important;
+}
+#service-list .thumbnail.service .btn-container .btn-primary:hover {
+    border-color: dodgerblue;
+    color: dodgerblue;
+    background: white;
+}

@@ -1,0 +1,89 @@
+/*modal styles*/
+section#service_detail {
+    padding: 100px 0 40px;
+    background: rgba(0,0,0,0.05);
+}
+.panel {
+    border: none;
+    box-shadow: 0 1px 1px 0.2px rgba(0,0,0,0.1);
+    border-radius: 4px;
+}
+.panel .panel-body {
+    padding: 0;
+    margin: 0;
+}
+.panel .panel-heading{
+    background: white;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+#picture-panel.panel .panel-body{
+    padding: 5px;
+    border: 0;
+}
+
+.panel .panel-body .caption {
+    padding: 10px 15px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.contact-us-btn.well {
+    background: white;
+    border: 0;
+    box-shadow: 0 1px 1px 0.2px rgba(0,0,0,0.1);    
+}
+
+.contact-us-btn.well .btn-default {
+    color: white;
+    background: dodgerblue;
+    border-radius: 20px;
+    border: 0;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+.contact-us-btn.well .btn-default:hover {
+    color: dodgerblue;
+    background: white;
+    border-color: dodgerblue;
+}
+
+.panel .panel-body img {
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
+    border-radius: 3px;
+}
+.panel .panel-body ul {
+    padding: 10px;
+}
+.panel .panel-body ul li {
+    margin: 5px;
+    padding: 3px 8px;
+    background: rgb(226, 226, 226);
+    color: gray;
+    border-radius: 20px;
+    display: inline-block;
+}
+.panel i {
+    color: dodgerblue;
+}
+.panel  .panel-footer {
+    padding: 8px;
+    text-align: center;
+}
+.panel .panel-footer a, .panel .panel-footer button {
+    border: 0;
+}
+.panel .panel-footer a i {
+    color: white;
+}
+.panel  .panel-footer a[href='/contact'].btn {
+    background: dodgerblue;
+    color: white;
+    border: 1px solid transparent;
+}
+.panel  .panel-footer a[href='/contact'].btn:hover {
+    background: white;
+    border-color: dodgerblue;
+    color: dodgerblue;
+}

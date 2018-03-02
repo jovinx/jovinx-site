@@ -1,0 +1,371 @@
+html,body {
+    overflow-x: hidden;
+    background: rgba(0, 0, 0, 0.025);
+}
+div {
+    margin: 0;
+    padding: 0;
+}
+section.call-to-action {
+    background: white;
+    z-index: 122;
+    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+/* stylings for the services sections*/
+#services {
+    margin: 0;
+    padding: 80px 0 150px;
+}
+
+#services #service-slide  {
+    padding: 30px 0 30px 0 !important;
+}
+
+#services #service-slide .item {
+    height: 290px;
+    width: 240px;
+    padding: 0px;
+    margin: 20px auto;
+    border: 0;
+    box-shadow: 3px 5px 12px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+}
+
+#services #service-slide .item h3{
+    margin: 0 !important;
+    padding: 5px 0;
+    color: black;
+}
+
+#services #service-slide .item p {
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+#services .item h3 i {
+    color: dodgerblue;
+    font-size: 18px;
+}
+#services .item h3 span {
+    font-size: 18px;
+    line-height: 20px;
+}
+#services .item .caption {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-color: transparent;
+    
+}
+#services #service-slide .item.thumbnail img {
+    height: 140px;
+    width: 100%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#services .slide-wrapper > a[href='/services']{
+    margin: 0;
+    margin-left: 13px;
+    font-size: 14px;
+    font-weight: bold;
+    color: dodgerblue;
+    text-transform: uppercase;
+}
+#services .item .caption .btn-container {
+    text-align: center;
+    position: absolute;
+    background: transparent;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+}
+#services .item .caption .btn-container .btn-primary, #our_works ul li .btn-container .btn-default {
+    border: 1px solid transparent;
+    background: dodgerblue;
+    font-weight: 700;
+    font-size: 11px !important;
+    color: white !important;
+    border-radius: 20px;
+    padding: 3px 10px !important;
+}
+#services .item .caption .btn-container .btn-primary:hover, #our_works ul li .btn-container .btn-default:hover {
+    border-color: dodgerblue;
+    color: dodgerblue !important;
+    background: white;
+}
+#services ul {
+    padding: 0 15px 0 0;
+    overflow: auto;
+    white-space: nowrap;
+    
+}
+#services ul li {
+    display: inline-block;
+    white-space: normal;
+    margin-right: 15px !important;
+}
+#services ul li:first-child {
+    margin-left: 5px !important;
+}
+
+
+#services ul::-webkit-scrollbar , #our_works ul::-webkit-scrollbar{
+    height: 10px;
+}
+#services ul::-webkit-scrollbar-track , #our_works ul::-webkit-scrollbar-track{
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;  
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.07) inset;  
+}
+#services ul::-webkit-scrollbar-thumb , #our_works ul::-webkit-scrollbar-thumb{
+    cursor: pointer;
+    background: dodgerblue;
+    border-radius: 20px;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.09) inset;  
+}
+
+
+
+
+#why-jovinx {
+    padding: 150px 0 150px;
+}
+#why-jovinx .slide-wrapper {
+    width: 100%;
+}
+#why-jovinx .slide-wrapper #why-jovinx-slide {
+    padding: 50px 0  30px 0 !important;
+}
+#why-jovinx .slide-wrapper #why-jovinx-slide .item {
+    height: 220px;
+    padding-top: 5px !important ;
+    border: 0;
+}
+#why-jovinx .slide-wrapper #why-jovinx-slide .well {
+    background: white;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+#why-jovinx .slide-wrapper #why-jovinx-slide .well:hover {
+    background: rgb(228, 222, 222);
+    box-shadow: none !important;    
+}
+#why-jovinx .slide-wrapper #why-jovinx-slide .item h3 {
+    font-size: 18px;
+    color: dodgerblue;
+}
+#why-jovinx .slide-wrapper #why-jovinx-slide .item h3 i {
+    color: royalblue;
+}
+#why-jovinx .slide-wrapper #why-jovinx-slide .item #icon-container {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: absolute;
+    padding: 8px 15px 8px 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: right;
+}
+@media(max-width: 767px)  and (min-width: 451px) {
+    #why-jovinx .slide-wrapper #why-jovinx-slide .item {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media(max-width: 450px) and (min-width: 300px) {
+    #why-jovinx .slide-wrapper #why-jovinx-slide .item {
+        width: 270px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+#client {
+    padding: 0 0 45px 0;
+    margin-bottom: 1px;
+    background: white;
+    position: relative;
+}
+#client #img-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 36%;
+    background: rgb(26, 26, 26);
+    background-image: url('/static/images/footer.jpg');
+    background-position: center;
+    background-size: cover;
+}
+#client #client-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 36%;
+    background: rgba(0,0,0, 0.8)
+}
+#client h3 {
+    padding-top: 120px;
+    color: white;
+}
+#client p {
+    color: white;
+}
+#client #client-slide {
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+#client #client-slide .item {
+    padding-top: 10px;
+    width: 88px;
+    height: 115px;
+    margin: 40px auto;
+}
+#client #client-slide .item img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.1);    
+}
+#client #client-slide .item p {
+    margin-top: 10px;
+}
+#client #client-slide .item p span {
+    font-size: 14px;
+    color: gray;
+}
+#client #client-slide .item p i {
+    color: dodgerblue;
+}
+
+
+
+/*TESTIMONIES*/
+#testimonies {
+    padding: 150px 0;
+}
+#testimonies #testimony-slide .item > i{
+    margin-bottom: 15px;
+    color: dodgerblue;
+}
+
+#testimonies #testimony-slide .item {
+    background: white;
+    height: 300px;
+    margin: 40px auto 30px auto;
+    padding: 40px 15px !important;
+    box-shadow: 0 6px 12px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+#testimonies #testimony-slide .item p {
+    margin: 0;
+    padding: 0;
+}
+#testimonies #testimony-slide .item p.testimony{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+#testimonies #testimony-slide .item p.client-name {
+    font-weight: 600;
+
+}
+#testimonies #testimony-slide .item .rating-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    text-align: right;
+    padding-right: 15px;
+}
+@media(min-width: 767px){
+    #testimonies #testimony-slide .item {
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media(max-width: 767px) {
+    #testimonies #testimony-slide .item p.testimony{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    #testimonies #testimony-slide .item {
+        padding: 30px 15px !important;
+        margin: 10px;
+    }
+    #testimonies #testimony-slide .item p.client-name {
+        font-size: 95%;
+    }
+    #testimonies #testimony-slide .item p.client-company {
+        font-size: 88%;
+    }
+}
+@media(max-width: 412px) {
+    #testimonies #testimony-slide .item p.testimony{
+        font-size: 15px;
+    }
+}
+
+
+/*OUR WORKS STYLINGS*/
+section#our_works {
+    padding: 50px 0 80px 0;
+}
+#our_works ul {
+    margin: 50px 0;
+    padding: 0;
+    overflow: auto;
+    white-space: nowrap;
+}
+#our_works ul li {
+    margin: 20px 15px 30px 0;
+    padding: 0;
+    display: inline-block;
+    width: 240px;
+    height: auto;
+    position: relative;
+    list-style: 0;
+}
+#our_works ul .thumbnail {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 4px 5px 8px 0px rgba(0, 0, 0, 0.3);
+}
+#our_works ul .thumbnail img {
+    border-radius: 10px;
+}
+#our_works ul li.thumbnail .caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: linear-gradient( to right , rgba(0,0,0, 0.1) 30%, rgba(0,0,0, 0.3) 70%, rgba(0,0,0, 0.4) 100%)
+}
+#our_works ul li.thumbnail .caption .btn-default {
+    text-transform: capitalize;
+}
+#our_works ul li.thumbnail .caption .btn-default:hover {
+    background: transparent;
+    color: white !important;
+    border-color: white;
+}

@@ -1,0 +1,202 @@
+{% extends 'main_site/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Gallery | Jovinx is a Design, Software and Web Development company in lagos, Nigeria
+{% endblock title %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'main_site/css/gallery.css' %}">
+{% endblock page_css %}
+
+
+
+<!--header-->
+{% block header %}
+    <header id="header" >
+        <div class="container">
+            <div class="row" >
+                <div id="header-text" class="col-lg-5 col-md-5 col-sm-6 col-xs-9">
+                    <h2>Our Gallery</h2>
+                    <p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common Webdevelopment</p>
+                    
+                    <div class="header-btns">
+                        <a class="btn btn-default" href="/services">OUR SERVICES</a>
+                        <a class="btn btn-default" href="/about">ABOUT US</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+{% endblock header %}<!--end of header-->
+    
+{% block content %}
+  
+    <section id="love" class="top">
+        <div class="container">
+            <div class="row text-center">
+                <i class="fa fa-heart fa-3x animated flash infinite" aria-hidden="true"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="webgallery">
+        <div class="container">
+            <h4><i class="fa fa-laptop fa-fw" aria-hidden="true"></i> Web Projects</h4>
+            <div class="slide-wrapper">
+
+                <div id="webgallery-slide" class="owl-carousel ">
+
+                    {% for data in websites %}
+                        <div class="thumbnail item">
+
+                            <img src="/uploads/{{data.web_img_url}}" alt="{{data.site_name}}">
+                            <div class="caption">
+                                <p class="text-center">{{data.site_name}}</p>
+                                <div class="btn-container">
+                                    <a class="btn btn-default btn-sm" href="{{data.site_link}} ">open</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+                <div class="slide-navs text-right">
+                    <i class="prev fa fa-arrow-left  fa-2x slider-btn" aria-hidden="true"></i>
+                    <i class="next fa fa-arrow-right fa-2x  slider-btn" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+    </section><!--end of service section-->
+
+    <section id="graphicsgallery">
+        <div class="container">
+            <h4><i class="fa fa-tv fa-fw" aria-hidden="true"></i>Graphics Projects</h4>
+            <div class="slide-wrapper">
+
+                <div id="graphicsgallery-slide" class="owl-carousel ">
+
+                    {% for data in graphics %}
+                        <div class="thumbnail item">
+
+                            <img src="/uploads/{{data.img_url}}" alt="{{data.category}}">
+                            <div class="caption">
+                                <p class="text-center">{{data.category}}</p>
+                                <div class="btn-container">
+                                    <a class="btn btn-default btn-sm" href="#">view</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+                <div class="slide-navs text-right">
+                    <i class="prev fa fa-arrow-left  fa-2x slider-btn" aria-hidden="true"></i>
+                    <i class="next fa fa-arrow-right fa-2x  slider-btn" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+    </section><!--end of graphics gallery section-->
+
+    <section class="call-to-action">
+
+        <div class="container text-center">
+            <a class="btn btn-default" href="#">ASK A QUESTION</a>
+            <a class="btn btn-default" href="/contact">CONTACT US</a>
+        </div>
+
+    </section>
+
+    <section id="illustration-gallery">
+        <div class="container">
+            <h4><i class="fa fa-heart fa-fw" aria-hidden="true"></i>Illustration Projects</h4>
+            <div class="slide-wrapper">
+
+                <div id="illustration-gallery-slide" class="owl-carousel ">
+
+                    {% for data in illustrations %}
+                        <div class="thumbnail item">
+
+                            <img src="/uploads/{{data.img_url}}" alt="{{data.category}} image">
+                            <div class="caption">
+                                <p class="text-center">{{data.category}}</p>
+                                <div class="btn-container">
+                                    <a class="btn btn-default btn-sm" href="#">view</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+                <div class="slide-navs text-right">
+                    <i class="prev fa fa-arrow-left  fa-2x slider-btn" aria-hidden="true"></i>
+                    <i class="next fa fa-arrow-right fa-2x  slider-btn" aria-hidden="true"></i>
+                </div>
+
+            </div>
+        </div>
+    </section><!--end of illustrations gallery section-->
+
+
+    <section id="art-gallery">
+        <div class="container">
+            <h4><i class="fa fa-paint-brush fa-fw" aria-hidden="true"></i>Art Projects</h4>
+            <div class="slide-wrapper">
+
+                <div id="art-gallery-slide" class="owl-carousel ">
+
+                    {% for data in arts %}
+                        <div class="thumbnail item">
+
+                            <img src="/uploads/{{data.img_url}}" alt="{{data.category}} image">
+                            <div class="caption">
+                                <p class="text-center">{{data.category}}</p>
+                                <div class="btn-container">
+                                    <a class="btn btn-default btn-sm" href="#">view</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+                <div class="slide-navs text-right">
+                    <i class="prev fa fa-arrow-left  fa-2x slider-btn" aria-hidden="true"></i>
+                    <i class="next fa fa-arrow-right fa-2x  slider-btn" aria-hidden="true"></i>
+                </div>
+
+            </div>
+
+            <div class="section-call-to-action row text-center">
+                <a class="btn btn-primary" href="/contact">LET'S DO BUSINESS</a>
+            </div>
+
+
+        </div>
+    </section><!--end of illustrations gallery section-->
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+{% block page_js %}
+<script src=" {% static 'main_site/js/gallery.js' %} "></script>
+{% endblock page_js %}

@@ -4,6 +4,33 @@ from jsonfield import JSONField
 
 # Create your models here.
 
+class JovinxInfo(models.Model):
+    founder = models.CharField(max_length=100, editable=False, default='John Obi Chinemerem')
+    company_name = models.CharField(max_length=50, default="Jovinx Creative Company")
+    site_url = models.URLField(default='http://www.jovinx.com.ng')
+    logo_url = models.ImageField(upload_to='logo/')
+
+    history = models.TextField(blank=True)
+
+    official_phone = models.BigIntegerField(blank=True, null=True)
+    mobile = models.BigIntegerField(blank=True, null=True)
+    whatsapp = models.BigIntegerField(blank=True, null=True)
+
+    official_mail_address = models.EmailField(blank=True)
+    support_mail_address = models.EmailField(blank=True)
+    job_mail_address = models.EmailField(blank=True)
+
+
+    headquarters_address = models.TextField(blank=True, null=True)    
+    address1 = models.TextField(blank=True, null=True)
+    address2 = models.TextField(blank=True, null=True)
+
+    established = models.DateField()
+
+    def __str__(self):
+        return self.company_name
+
+
 class Service(models.Model):
     title = models.CharField(max_length=100)
     image_url = models.ImageField(upload_to='services/', unique=True)
@@ -15,7 +42,7 @@ class Service(models.Model):
         return self.title
 
 class Client(models.Model):
-    company_name = models.CharField(max_length=200)
+    company_name = models.CharField(max_length=100)
     company_logo_url = models.ImageField(upload_to='clients/', unique=True)
 
     def __str__(self):
@@ -23,9 +50,11 @@ class Client(models.Model):
 
 class Testimony(models.Model):
     customer_fullname = models.CharField(max_length=100)
-    company = models.CharField(max_length=80, null=True)
+    company_or_business = models.CharField(max_length=80, blank=True)
+    job_title = models.CharField(max_length=100, blank=True)
+    city = models.CharField(max_length=25)
     testimony = models.TextField(max_length=300)
-    thumbnail_url = models.ImageField(upload_to="testimonies/thumbnails/", null=True, unique=True)
+    thumbnail_url = models.ImageField(upload_to="testimonies/thumbnails/", blank=True)
 
     def __str__(self):
         return self.customer_fullname
@@ -34,7 +63,6 @@ class Testimony(models.Model):
 class WebGallery(models.Model):
     site_name = models.CharField(max_length=100)
     site_link = models.URLField(max_length=100)
-    mobile_img_url = models.ImageField( upload_to="gallery/site/web/", unique=True)
     web_img_url = models.ImageField( upload_to="gallery/site/mobile/", unique=True)
 
     def __str__(self):
@@ -53,8 +81,7 @@ class GraphicsGallery(models.Model):
         ('Poster', 'Poster')
     )
     category = models.CharField(max_length=50, choices=GRAPHICS_TYPES)
-    small_img_url = models.ImageField(upload_to="gallery/graphics/", unique=True)
-    large_img_url = models.ImageField(upload_to="gallery/graphics/", unique=True)
+    img_url = models.ImageField(upload_to="gallery/graphics/", unique=True)
 
     def __str__(self):
         return self.category
@@ -76,8 +103,7 @@ class IllustrationGallery(models.Model):
     )
     
     category = models.CharField(max_length=50, choices=ILLUSTRATION_TYPES)
-    small_img_url = models.ImageField(upload_to="gallery/illustraton/", unique=True)
-    large_img_url = models.ImageField(upload_to="gallery/illustraton/", unique=True)
+    img_url = models.ImageField(upload_to="gallery/illustraton/", unique=True)
 
     def __str__(self):
         return self.category
@@ -91,8 +117,7 @@ class ArtGallery(models.Model):
         ('Painting', 'Painting')
     ]
     category = models.CharField(max_length=50, choices=ART_TYPES)
-    small_img_url = models.ImageField(upload_to="gallery/graphics/", unique=True)
-    large_img_url = models.ImageField(upload_to="gallery/graphics/", unique=True)
+    img_url = models.ImageField(upload_to="gallery/graphics/", unique=True)
 
     def __str__(self):
         return self.category
@@ -110,3 +135,41 @@ class MotionGraphicsGallery(models.Model):
     def __str__(self):
         return self.category
   
+class WhyJovinx(models.Model):
+    title = models.CharField(max_length=30)
+    description = models.TextField(max_length=100)
+
+    def __str__(self):
+        return self.title
+
+
+class Message(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    phone = models.BigIntegerField()
+    email = models.EmailField()
+    message = models.TextField()
+    received_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "Message From "+self.first_name
+
+class ServiceRequest(models.Model):
+
+    SERVICES = Service.objects.all()
+    SERVICE_LIST = []
+    
+    for data in SERVICES:
+        service_tuple = (data.title, data.title)
+        SERVICE_LIST.append(service_tuple)  
+
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    phone = models.BigIntegerField()
+    email = models.EmailField()
+    service_requested = models.CharField(max_length=200, choices=SERVICE_LIST)
+    specifications = models.TextField(blank=True, null=True)
+    received_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return "Service Request From "+self.first_name+' '+self.last_name

@@ -1,0 +1,102 @@
+{% extends 'main_site/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Services | Jovinx is a Design, Software and Web Development company in lagos, Nigeria
+{% endblock title %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'main_site/css/services.css' %}">
+{% endblock page_css %}
+
+{% block header %}
+
+{% endblock header %}
+
+
+
+{% block content %}
+
+    <!--SERVICE MODAL POP-U-->
+    <div id="service_detail_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" arial-lable="Close">
+                        <span arial-hidden="true">&times</span>
+                    </button>
+    
+                    <h4 class="modal-title"><i class="fa fa-fw" aria-hidden="true"></i> {{ service.title }}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <img src="" alt="service image">
+
+                        <div class="box col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h4><i class="fa fa-cog fa-fw" aria-hidden="true"></i>Options</h4>
+                            
+                            <ul>
+                                service options goes here
+                            </ul>
+                        </div>
+                    </div>
+
+    
+                    <div class="text-center caption">
+                        <h4><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i>Description</h4>
+                        <p>{{ service.description }}</p>
+                    </div>
+                </div>
+    
+                <div class="modal-footer">
+                    <a class="btn btn-default btn-sm " href="/contact"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i> Contact Us</a>
+                    <button class="btn btn-default btn-sm"  data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div><!--Service modal End-->
+    
+    <section id="service-list" >
+        <div class="container">
+            <div class="row">
+                {% for service in services %}
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <div class="thumbnail service">
+
+                        <h3><i class="fa {{service.fontawesome_icon}}" aria-hidden="true"></i> {{service.title}}</h3>
+                        
+
+                        <img src="/uploads/{{service.image_url}}" alt="{{service.title}}">
+                        <div class="caption">
+
+                            <p>{{service.description | truncatechars:80}}</p>
+                            
+                            
+                        </div>
+
+                        <div class="btn-container text-center">
+                            <button data-info="{{service.description}} " data-icon="{{service.fontawesome_icon}} " data-img-url="{{service.image_url}} " data-title="{{service.title}}" data-subservices="{{service.sub_services}}" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#service_detail_modal"> <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i> View</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clear-fix"></div>
+
+                {% endfor %}
+            </div>
+
+            <div class="section-call-to-action row text-center">
+                <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#service_request_modal">REQUEST A SERVICE NOW</a>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock content %}
+    
+
+{% block page_js %}
+  <script src=" {% static 'main_site/js/services.js' %} "></script>
+{% endblock page_js %}

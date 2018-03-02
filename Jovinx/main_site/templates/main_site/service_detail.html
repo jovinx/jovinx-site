@@ -1,0 +1,79 @@
+{% extends 'main_site/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Service | {{ service_info.title }} | Jovinx is a Design, Software and Web Development company in lagos, Nigeria
+{% endblock title %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'main_site/css/service_detail.css' %}">
+{% endblock page_css %}
+
+{% block content %}
+    <section id="service_detail">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-8 col-xs-12">
+
+                    <div id="picture-panel" class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><i class="fa {{service_info.fontawesome_icon}} fa-fw" aria-hidden="true"></i> {{ service_info.title }}</h4>
+                        </div>
+                        <div class="panel-body">
+                            
+                            <div>
+                                <img src="/uploads/{{service_info.image_url}} " alt="service image">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><i class="fa fa-gear fa-fw" aria-hidden="true"></i> Options</h4>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                {% for data in service_info.sub_services %}
+                                    <li><i class="fa {{service_info.fontawesome_icon}} fa-fw" aria-hidden="true"></i> {{data}} </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title"><i class="fa fa-info-circle fa-fw" aria-hidden="true"></i> Description</h4>
+                        </div>
+                        <div class="panel-body">
+                            <div class="caption">
+                                <p>{{ service_info.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-us-btn text-center well">
+                        <a class="btn btn-default btn-sm" href="#" data-toggle="modal" data-target="#service_request_modal"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> MAKE A REQUEST</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+    </section><!--Service modal End-->
+{% endblock content %}
+
+
+
+
+
+
+{% block page_js %}
+  <script src=" {% static 'main_site/js/service_detail.js' %} "></script>
+{% endblock page_js %}

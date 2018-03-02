@@ -1,0 +1,245 @@
+{% extends 'main_site/base.html' %}
+
+{% load static %}
+
+{% block title %}
+    About Jovinx | Jovinx is a Design, Software and Web Development company in lagos, Nigeria
+{% endblock title %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'main_site/css/about.css' %}">
+{% endblock page_css %}
+
+
+
+<!--header-->
+{% block header %}
+    <header id="header" >
+        <div class="container">
+            <div class="row" >
+                    <div id="header-text" class="col-lg-5 col-md-5 col-sm-6 col-xs-9">
+                        <h2>About Us</h2>
+                        <p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common Webdevelopment</p>
+                        
+                        <div class="header-btns">
+                            <a class="btn btn-default" href="/services">OUR SERVICES</a>
+                            <a class="btn btn-default" href="/contact">CONTACT US</a>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </header>
+{% endblock header %}<!--end of header-->
+
+
+{% block content %}
+
+    <section id="love" class="top">
+        <div class="container">
+            <div class="row text-center">
+                <i class="fa fa-heart fa-3x animated flash infinite" aria-hidden="true"></i>
+            </div>
+        </div>
+    </section>    
+    
+    <section id="objectives">
+        <div class="container">
+            <div class="row">
+                <div class="objective col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div id="vision" class="well text-center">
+                        <h4><span>OUR VISION</span></h4>
+                        <i class="fa fa-diamond fa-fw darkblue" aria-hidden="true"></i>
+                        <i class="fa fa-diamond fa-fw lightblue" aria-hidden="true"></i>
+                        <i class="fa fa-diamond fa-fw orange" aria-hidden="true"></i>
+                        <p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common Webdevelopment Because Django was developed in a fast-paced newsroom environment, it was designed to make common Webdevelopment</p>
+                        <i class="objective-icon fa fa-globe fa-3x" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="objective col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="well text-center" id="mission">
+                        <h4><span>OUR MISSION</span></h4>
+                        <i class="fa fa-diamond fa-fw darkblue" aria-hidden="true"></i>
+                        <i class="fa fa-diamond fa-fw lightblue" aria-hidden="true"></i>
+                        <i class="fa fa-diamond fa-fw orange" aria-hidden="true"></i>
+                        <p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common Webdevelopment Because Django was developed in a fast-paced newsroom environment</p>
+                        <i class="objective-icon fa fa-road fa-3x" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="strategy">
+        <div class="container">
+            <div class="row">
+                <div class=" text-center col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <h3>OUR STRATEGY</h3>
+                    <p>Following the best project management practices and the <a href="#">Agile</a> development process, Here is how we deliver</p>
+                </div>
+            </div>
+
+            <div class="slide-wrapper">
+
+                <div id="strategy-slide" class="owl-carousel text-center">
+                        <div class="item">
+                            <h2> 1</h2>
+                            <h4>YOUR IDEA</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 2</h2>
+                            <h4>WE DESIGN</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 3</h2>
+                            <h4>WE IMPLEMENT</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 4</h2>
+                            <h4>YOU REVIEW</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 5</h2>
+                            <h4>YOU MAKE CHANGES</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 6</h2>
+                            <h4>WE EFFECT CHANGES</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 7</h2>
+                            <h4>YOU REVIEW AGAIN</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 8</h2>
+                            <h4>THESE CONTINUE</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 9</h2>
+                            <h4>TILL YOUR SATISFACTION</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 10</h2>
+                            <h4>WE MAINTAIN</h4>
+                        </div>
+                        <div class="item">
+                            <h2> 11</h2>
+                            <h4>ALL IS HAPPY</h4>
+                        </div>
+                </div>
+
+                <div class="slide-navs text-center">
+                    <i class="prev fa fa-arrow-left  fa-2x slider-btn" aria-hidden="true"></i>
+                    <i class="next fa fa-arrow-right fa-2x  slider-btn" aria-hidden="true"></i>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+    <section id="values">
+        <div class="container">
+            <div class="row">
+                <div class=" text-center col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+                    <h3>OUR VALUES</h3>
+                    <p>Following the best project management practices and the <a href="#">Agile</a> development process, Here is how we deliver</p>
+                </div>
+            </div>
+
+
+            <div id="value-content" class="row">
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="well">
+                        <h3><i class="fa fa-dot-circle-o fa-fw" aria-hidden="true"></i>INNOVATION</h3>
+
+                        <p>We implement the latest Solutions and focus on Solutions for the Future</p>
+
+                        <div class="icon-container">
+                            <i class="fa fa-diamond fa-fw darkblue" aria-hidden="true"></i>
+                            <i class="fa fa-diamond fa-fw lightblue" aria-hidden="true"></i>
+                            <i class="fa fa-diamond fa-fw orange" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="well">
+                        <h3><i class="fa fa-dot-circle-o fa-fw" aria-hidden="true"></i>INTEGRITY</h3>
+
+                        <p>We act consistently based on openness, honesty, respect and care</p>
+
+                        <div class="icon-container">
+                            <i class="fa fa-diamond fa-fw darkblue" aria-hidden="true"></i>
+                            <i class="fa fa-diamond fa-fw lightblue" aria-hidden="true"></i>
+                            <i class="fa fa-diamond fa-fw orange" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="well">
+                        <h3><i class="fa fa-dot-circle-o fa-fw" aria-hidden="true"></i>EXCELLENCE</h3>
+
+                        <p>We deliver what we promise and add value beyond expectations</p>
+
+                        <div class="icon-container">
+                            <i class="fa fa-diamond fa-fw darkblue" aria-hidden="true"></i>
+                            <i class="fa fa-diamond fa-fw lightblue" aria-hidden="true"></i>
+                            <i class="fa fa-diamond fa-fw orange" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="well">
+                        <h3><i class="fa fa-dot-circle-o fa-fw" aria-hidden="true"></i>ACCOUNTABILITY</h3>
+
+                        <p>We have clear understanding of what is expected of us and act accordingly</p>
+
+                        <div class="icon-container">
+                            <i class="fa fa-diamond fa-fw darkblue" aria-hidden="true"></i>
+                            <i class="fa fa-diamond fa-fw lightblue" aria-hidden="true"></i>
+                            <i class="fa fa-diamond fa-fw orange" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-call-to-action row text-center">
+                <a class="btn btn-primary" href="/contact">LET'S DO BUSINESS</a>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock content %}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block page_js %}
+  <script src=" {% static 'main_site/js/about.js' %} "></script>
+{% endblock page_js %}

@@ -1,0 +1,275 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl-carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl-theme.css' %}">
+    <link rel="stylesheet" href="{% static '/main_site/css/base.css' %}">
+    {% block page_css %}
+        <!--current page css-->
+    {% endblock page_css %}
+    
+    <title>
+        {% block title %}
+            <!--current page title will go here-->
+        {% endblock title %}
+    </title>
+</head>
+<body>
+
+    <!--ASK QUESTION MODAL POP-UP-->
+    <div id="service_request_modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" arial-lable="Close">
+                        <span arial-hidden="true">&times</span>
+                    </button>
+                    <h4 class="modal-title text-center">SERVICE REQUEST FORM</h4>
+                </div>
+
+                <div class="modal-body">
+                    <form action="/forms/service_request" method="post">
+
+                        {% csrf_token %}
+
+                        <div class="row">
+                            
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="input-group">
+                                    <label for="{{service_request_form.first_name.id_for_label}}" class="input-group-addon">FIRST NAME</label>
+                                    {{service_request_form.first_name}}
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="input-group">
+                                    <label for="{{service_request_form.last_name.id_for_label}}" class="input-group-addon">LAST NAME</label>
+                                    {{service_request_form.last_name}}
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="input-group">
+                                    <label for="{{service_request_form.phone.id_for_label}}" class="input-group-addon">PHONE</label>
+                                    {{service_request_form.phone}}
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="input-group">
+                                    <label for="{{service_request_form.email.id_for_label}}" class="input-group-addon">EMAIL</label>
+                                    {{service_request_form.email}}
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="input-group">
+                                    <label for="{{service_request_form.service_requested.id_for_label}}" class="input-group-addon">SERVICE</label>
+                                    {{service_request_form.service_requested}}
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <label for="{{service_request_form.specifications.id_for_label}}">SPECIFICATIONS</label>
+                                    {{service_request_form.specifications}}
+                                </div>
+                            </div>
+
+                            <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <button class="btn btn-primary" type="submit">REQUEST<i class="fa fa-send fa-fw" aria-hidden="true"></i></button>
+                            </div>
+                            
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% block nav %}
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img alt="Brand" src="{% static 'images/logo.png' %}">
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="{{ home_active }}"><a href="/">Home</a></li>
+                        <li class="{{ service_active }}"><a href="/services">Services</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                {% for service in services %}
+                                    <li><a href="/services/{{ service.pk }}">{{ service.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="{{ about_active }}"><a href="/about">About</a></li>
+                        <li ><a  href="/contact"> <i class="fa fa-phone fa-fw" aria-hidden="true"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    {% endblock nav %}
+
+
+
+    {% block header %}
+      
+    {% endblock header %}
+
+
+    
+    {% block content %}
+      
+    {% endblock content %}
+    
+
+    {% block footer %}
+
+        <section id="love" class="bottom">
+            <div class="container">
+                <div class="row text-center">
+                    <i class="fa fa-heart fa-3x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <h4>Services</h4>
+                        
+                        <p>
+                            {% for service in services %}
+                            <i class="fa {{service.fontawesome_icon}} fa-fw" aria-hidden="true"></i> <a href="/services/{{ service.pk}}"> {{ service.title }} </a><br>
+                            {% endfor %}
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-left ">
+
+                        <h4>Jovinx</h4>
+                        <p>
+                            <a href="/"> <i class="fa fa-home fa-fw" aria-hidden="true"></i> Home</a><br>
+                            <a href="/services"> <i class="fa fa-gear fa-fw" aria-hidden="true"></i> Sevices</a><br>
+                            <a href="/about"> <i class="fa fa-black-tie fa-fw" aria-hidden="true"></i> About</a><br>
+                            <a href="/contact"> <i class="fa fa-phone-square fa-fw" aria-hidden="true"></i> Contact</a>
+                        </p>
+
+                        <br>
+
+                        <h4>Social Links</h4>
+                        <p>
+                            <a href="#"> <i class="fa fa-facebook-official fa-fw" aria-hidden="true"></i> Facebook</a><br>
+                            <a href="#"> <i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i> Twitter</a><br>
+                            <a href="#"> <i class="fa fa-instagram fa-fw" aria-hidden="true"></i> Instagram</a></i><br>
+                            <a href="#"> <i class="fa fa-linkedin-square fa-fw" aria-hidden="true"></i> Linkedin</a> 
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-left">
+
+                        <h4>Contact Information</h4>
+                    
+                        <p>
+                            <i class="fa fa-phone fa-fw" aria-hidden="true"></i> Phone: {{ jovinx_data.official_phone }}<br>
+                            <i class="fa fa-whatsapp fa-fw" aria-hidden="true"></i> Whatsapp: {{ jovinx_data.whatsapp }}<br>
+                        </p>
+                        <br>
+                        <h4>Official Mails</h4>
+                        
+                        <p>
+                            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>Official: <a href="mailto:{{ jovinx_data.official_mail_address }}"> {{ jovinx_data.official_mail_address }}</a><br>
+                            <i class="fa fa-envelope-open fa-fw" aria-hidden="true"></i>Support: <a href="mailto:{{ jovinx_data.support_mail_address }}"> {{ jovinx_data.support_mail_address }}  </a><br>
+                        </p>
+                        <br>
+                        <h4>Location</h4>
+                        
+                        <p> <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> {{jovinx_data.address1}} </p>
+
+                    </div>
+
+                    <div id="footer_form" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <h4 style="line-height: 20px;"></h4>
+                        <section class="footer-call-to-action" id="middle-call-to-action">
+
+                            <div class="row">
+                                <div class="footer-btn-container col-lg-6 col-md-12 col-sm-6 col-xs-6">
+                                    <a class="btn btn-default btn-block" href="#" data-toggle="modal" data-target="#service_request_modal" >GET A SERVICE</a>
+                                </div>
+                                <div class="footer-btn-container col-lg-6 col-md-12 col-sm-6 col-xs-6">
+                                    <a class="btn btn-default btn-block" href="/contact">CONTACT US</a>
+                                </div>
+                            </div>
+
+                        </section>
+
+                        <br>
+                        <h4>Subscribe To Our NewsLetter</h4>
+                        <p>Be the first to learn about our Promotion offers, Job Vacancies, Coding Classes & Events</p>
+
+                        <form action="/news_letter_subscription" method="POST">
+                            <div class="form-group">                               
+                                <input id="user_email" name="user_email" type="text" class="form-control" placeholder="Enter your email">
+                                <button style="margin-top: 10px;" type="submit" class="btn btn-primary btn-block"> SUBSCRIBE </button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+        <section id="footer-lower" class="darkblue-bg">
+            <div class="container text-center">
+                <div class="row">
+                    <p>All Rights Reserved. &copyCopyright {{ this_year }} <br> A creation of <a href="/"> Jovinx Creative</a> Company</p>
+                    <ul>
+                        <li> <a href="#" > <h4> <i class="fa fa-shield fa-fw" aria-hidden="true"></i> PRIVACY POLICY</h4> </a> </li> | 
+                        <li> <a href="#" > <h4> <i class="fa fa-handshake-o fa-fw" aria-hidden="true"></i> TERMS & CONDITIONS</h4> </a> </li> | 
+                        <li> <a href="#" > <h4> <i class="fa fa-info-circle" aria-hidden="true"></i> FAQ</h4> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        
+
+    {% endblock footer %}
+
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl-carousel.js' %}"></script>
+    {% block page_js %}
+        <script src="{% static 'main_site/js/base.js' %}"></script>
+    {% endblock page_js %}
+</body>
+
+
+</html>

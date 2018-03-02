@@ -1,0 +1,470 @@
+html,body {
+    overflow-x: hidden;
+}
+div{
+    margin: 0;
+    padding: 0;
+}
+.darkblue {
+    color: royalblue;
+}
+.darkblue-bg {
+    color: white;
+    background: royalblue;
+}
+.lightblue {
+    color: dodgerblue;
+}
+.lightblue-bg {
+    color: white;
+    background: dodgerblue;
+}
+.orange {
+    color: rgb(255, 111, 58);
+}
+.orange-bg {
+    color: white;
+    background: rgb(255, 111, 58);
+}
+
+/*header styles*/
+header {
+    color: white;
+    margin-top: 0px;
+    padding: 0px;
+    background: rgb(3, 26, 97);
+    height: 450px;
+    width: 100%;
+}
+header #header-text {
+    margin-top: 120px !important;
+    padding-left: 15px;
+    border-radius: 5px;
+
+}
+
+header #header-text h2 {
+    font-size: 40px;
+}
+header #header-text p {
+    font-size: 18px;
+}
+header .header-btns {
+    margin-top: 30px;
+}
+header .header-btns .btn-default, section.call-to-action .btn-default, section#middle-call-to-action .btn-default, #contact-btns .btn-primary {
+    font-weight: 700;
+    border: 1px solid transparent;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 13px !important;
+}
+header .header-btns a[href='/services'].btn-default, section.call-to-action a[href='#'].btn-default, section#middle-call-to-action a[href='#'].btn-default, #contact-btns #service-request {
+    background: dodgerblue; 
+}
+header .header-btns a[href='/about'].btn-default,header .header-btns a[href='/contact'].btn-default, section.call-to-action a[href='/contact'].btn-default, section#middle-call-to-action a[href='/contact'].btn-default, #contact-btns #message-us {
+    background: rgb(255, 111, 58); 
+}
+header .header-btns a[href='/services'].btn-default:hover, section.call-to-action a[href='#'].btn-default:hover , section#middle-call-to-action a[href='#'].btn-default:hover, #contact-btns #service-request:hover {
+    background: transparent !important; 
+    border-color: dodgerblue;
+    color: dodgerblue;
+}
+header .header-btns a[href='/about'].btn-default:hover, header .header-btns a[href='/contact'].btn-default:hover , section.call-to-action a[href='/contact'].btn-default:hover, section#middle-call-to-action a[href='/contact'].btn-default:hover, #contact-btns #message-us:hover {
+    background: transparent !important; 
+    border-color: rgb(255, 111, 58);
+    color: rgb(255, 111, 58);
+}
+
+@media(max-width: 400px) {
+    header #header-text h2{
+        font-size: 30px;
+    }
+    header #header-text p {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    header #header-text .header-btns .btn-default {
+        font-size: 13px;
+        margin: 5px 0;
+    }
+}
+
+/*modal styles*/
+.modal, .fade, .modal-content, .modal-dialog {
+    border: 0 !important;
+    border-radius: 3px;
+}
+.modal .modal-content .modal-header {
+    padding: 5px 15px ;
+}
+.modal .modal-body {
+    padding: 0;
+    margin: 0;
+}
+.modal .modal-body .row {
+    margin: 0;
+    width: 100%;
+    padding: 0;
+}
+.modal .modal-body img {
+    width: 100%;
+    height: auto;
+    margin: 0 !important;
+}
+.modal .modal-body .row .box{
+    background: rgb(231, 231, 232);
+    padding: 15px;
+}
+.modal .modal-body .row .box h4{
+    margin: 0 0 10px 0;
+
+    padding: 0;
+    color: black;
+}
+.modal .modal-body .caption {
+    padding: 10px 15px;
+    font-size: 15px;
+    text-align: left;
+}
+
+.modal i {
+    color: dodgerblue;
+}
+.modal .modal-body ul {
+    margin: 0;
+    padding-left: 15px;
+}
+.modal .modal-body ul li {
+    margin: 5px;
+    padding: 5px 8px;
+    background: white;
+    color: rgba(0, 0, 0, 0.8);
+    border-radius: 14px;
+    display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 13px;
+}
+
+.modal .modal-body ul li  i {
+    color: dodgerblue;
+    padding-right: 5px;
+}
+.modal .modal-content .modal-footer {
+    padding: 5px 10px;
+}
+.modal .modal-content .modal-footer a, .modal .modal-content .modal-footer button {
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 3px 5px;
+}
+.modal .modal-content .modal-footer a[href='/contact'].btn {
+    background: dodgerblue;
+    color: white;
+    border: 1px solid transparent;
+    
+}
+.modal .modal-content .modal-footer a[href='/contact'].btn i {
+    color: white;
+}
+.modal .modal-content .modal-footer a[href='/contact'].btn:hover {
+    background: royalblue;
+    color: white;
+}
+
+/*SERVICE REQUEST MODAL FORM*/
+#service_request_modal.modal .modal-header {
+    padding: 10px 15px;
+}
+#service_request_modal.modal .modal-body {
+    padding: 15px 0;
+}
+.input-group, .form-group {
+    margin: 10px 0;
+}
+#service_request_modal.modal .input-group-addon {
+    color: white;
+    font-weight: bold;
+    background: dodgerblue;
+    border: none;
+    font-size: 12px;
+}
+#service_request_modal.modal .form-control {
+    background: white;
+    color: gray;
+    font-size: 14px;
+    border-color: dodgerblue;
+}
+#service_request_modal.modal .modal-body button {
+    color: white;
+    background: dodgerblue;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+#service_request_modal.modal .modal-body button:hover {
+    background: royalblue;
+}
+#service_request_modal.modal .modal-body button i {
+    color: white;
+}
+/*END OF SERVICE REQUEST FORM MODAL*/
+
+/*GENERAL FOR ALL HEADERS*/
+section > .container > .row > div.col-lg-6 > h3, section > .container-fluid > .row > div.col-lg-6 > h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+section > .container > .row > div.col-lg-6 > p, section > .container-fluid > .row > div.col-lg-6 > p{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@media(max-width: 450px) {
+    section > .container > .row > div.col-lg-6 > h3, section > .container-fluid > .row > div.col-lg-6 > h3 {
+        font-size: 22px;
+    }
+    section > .container > .row > div.col-lg-6 > p, section > .container-fluid > .row > div.col-lg-6 > p{
+        font-size: 16px;
+    }
+}
+/*END OF SECTION HEADERS GENERAL STYLES*/
+
+/* GENERAL FOR SLIDES */
+.slide-wrapper .slide-navs {
+    text-align: center;
+}
+.slide-wrapper .slide-navs i {
+    color: dodgerblue;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+
+nav.navbar {
+    border-radius: 0;
+    background: white;
+    padding: 0;
+    border: 0;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2)
+}
+.navbar .container {
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.navbar .navbar-brand {
+    height: inherit;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.navbar .navbar-brand img {
+    height: 42px;
+    margin: 5% 0px auto 0px;
+    padding: 3px 0;
+
+}
+@media(max-width: 800px) {
+    .navbar .navbar-brand img{
+        margin-left: 20px;
+    }
+}
+@media(max-width: 767px) {
+    .navbar .navbar-brand img {
+        height: 34px;
+        margin: 4.5% 0 auto 15px;
+    }
+}
+.navbar .navbar-nav {
+    background: white;
+}
+.navbar .navbar-nav > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 700;
+    color: black;
+    border: 2px solid transparent;
+}
+.navbar .navbar-nav > li > a[href="/contact"] {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 16px;
+    background: dodgerblue;
+    color: white;
+    border: 0;
+    border-radius: 22px;
+}
+.navbar .navbar-nav > li > a[href="/contact"] i {
+    color: greenyellow;
+}
+.navbar .navbar-nav > li > a:hover {
+    border-bottom-color: dodgerblue;
+}
+
+.navbar .navbar-nav > li > a:active, .navbar .navbar-nav > li > a:focus {
+    background: white ;
+    border: 2px solid transparent;
+    border-bottom-color: dodgerblue;
+    color: dodgerblue ;
+}
+.navbar .navbar-nav li.active a{
+    color: dodgerblue !important ;
+    background: white !important ;
+}
+/*contact button active, hover and focus state styles*/
+.navbar .navbar-nav > li > a[href="/contact"]:hover, .navbar .navbar-nav > li > a[href="/contact"]:active, .navbar .navbar-nav > li > a[href="/contact"]:focus {
+    color: white;
+    background: royalblue;
+    border: 0;
+}
+@media(max-width: 767px) {
+    .navbar .navbar-nav > li > a[href="/contact"] {
+        width: 200px;
+        float: right;
+        text-align: center;
+        margin-right: 15px;
+    }
+}
+
+/* Making bootstrap dropdown appear on hover */
+@media(min-width: 768px){
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+    }
+}
+
+/* style for the double buttons call to action*/
+section.call-to-action {
+    padding: 30px 0;
+    width: 100%;
+}
+
+
+/* These are the LET'S DO BUSINESS BUTTONS*/
+div.section-call-to-action .btn-primary, #forms button.btn-primary{
+    border: 1px solid transparent;
+    background: dodgerblue;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 13px !important;
+}
+div.section-call-to-action .btn-primary:hover, #forms button.btn-primary:hover {
+    color: dodgerblue;
+    background: transparent;
+    border-color: dodgerblue;
+}
+/*end of LET'S DO BUSINESS BUTTONS*/
+
+
+/*footer*/
+section#love {
+    padding: 15px 0;
+    background: white;
+}
+section#love.top {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+section#love.bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+section#love i {
+    padding: 0 10px;
+    font-size: 150%;
+    color: dodgerblue;
+}
+@media(max-width: 767px) {
+    section#love i {
+        font-size: 115%;
+    }
+}
+#footer {
+    background: rgb(70, 61, 61);
+    padding: 90px 0;
+    color: white;
+}
+#footer i {
+    color: dodgerblue;
+}
+#footer a {
+    color: white;
+}
+
+#footer .footer-call-to-action .row {
+    margin: 0;
+    padding: 0;
+}
+#footer .footer-call-to-action .footer-btn-container {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+#footer .footer-call-to-action a.btn {
+    border-radius: 3px !important;
+}
+#footer .footer-call-to-action a[href="/contact"] {
+    margin-left: 5px;
+}
+@media(max-width: 1199px) and (min-width: 992px) {
+    #footer .footer-call-to-action a[href="/contact"] {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+}
+#footer #footer_form form input {
+    border: 0;
+    background: white;
+    color: rgb(70, 61, 61);
+    border-radius: 3px;
+}
+#footer #footer_form form button.btn-primary {
+    background: dodgerblue;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+#footer #footer_form form button.btn-primary:hover {
+    background: royalblue;
+}
+
+
+
+#footer-lower {
+    padding: 25px 0 15px 0;
+}
+
+#footer-lower p {
+    margin: 0;
+    padding: 0;
+}
+#footer-lower a {
+    color: rgb(164, 206, 248);
+    margin: 0;
+}
+#footer-lower ul {
+    padding: 0;
+    margin: 0;
+}
+#footer-lower ul li {
+    display: inline-block;
+    margin: 0;
+}
+#footer-lower ul li a h4{
+    font-size: 75%;
+    margin: 0;
+    padding: 0;
+}
+#footer-lower ul li a i {
+    color: white;
+}

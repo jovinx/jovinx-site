@@ -1,0 +1,140 @@
+
+body {
+    background: rgba(0,0,0, 0.03);
+}
+section#objectives {
+    padding: 120px 0 120px;
+}
+#objectives .objective .well {
+    border-radius: 3px;
+    width: 290px;
+    margin: 20px auto;
+    padding-top: 20px;
+    height: 230px;
+    background: white;
+    border: 0;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    position: relative;
+
+}
+
+#objectives .objective .well h4{
+    text-align: center;
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    margin: 0;
+
+}
+#objectives .objective .well h4 span {
+    font-size: 15px;
+    font-weight: bold;
+    padding: 7px 15px;
+    border-radius: 20px;
+    background: dodgerblue;
+    color: white;
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.15)
+
+}
+#objectives .objective .well p {
+    color: rgba(0,0,0, 0.6);
+    font-size: 105%;
+    margin-top: 10px;
+}
+#objectives .objective .well i.objective-icon {
+    position: absolute;
+    bottom: -20px;
+    color: dodgerblue;
+    text-align: center;
+    margin: 0;
+    left: 0;
+    right: 0;
+}
+@media(max-width: 767px) {
+    #objectives .objective #mission {
+        margin-top: 60px;
+    }
+}
+
+
+/*strategy stylings*/
+section#strategy {
+    padding: 150px 0 100px;
+}
+#strategy .slide-wrapper {
+    margin: 30px 0;
+}
+
+#strategy .slide-wrapper .owl-carousel{
+    margin: 50px 0;
+}
+#strategy .slide-wrapper .owl-carousel .item {
+    margin: 10px 13px;
+    height: 130px;
+    padding-top: 15px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    z-index: -2;
+}
+#strategy .slide-wrapper .owl-carousel .item h2 {
+    height: 50px;
+    width: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    line-height: 50px;
+    background: dodgerblue;
+    color: white;
+    position: relative;
+}
+#strategy .slide-wrapper .owl-carousel .item h2::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 60px;
+    height: 60px;
+    opacity: 0.1;
+    border-radius: 50%;
+    background: royalblue;
+    z-index: 0;
+}
+#strategy .slide-wrapper .owl-carousel .item h4 {
+    font-size: 18px;
+}
+
+
+/*value stylings*/
+section#values {
+    padding: 100px 0 120px;
+}
+#values #value-content {
+    margin-top: 50px;
+    padding-top: 10px;
+}
+#values #value-content .well {
+    position: relative;
+    background: white;
+    border: 0;
+    padding-top: 30px;
+    height: 200px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+}
+#values #value-content .well h3 {
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: dodgerblue;
+}
+#values #value-content .well h3 i {
+    color: royalblue;
+}
+#values #value-content .well .icon-container {
+    position: absolute;
+    text-align: right;
+    padding-right: 15px;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
