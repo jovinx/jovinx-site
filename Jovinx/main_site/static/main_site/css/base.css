@@ -389,7 +389,7 @@ section#love i {
     }
 }
 #footer {
-    background: rgb(70, 61, 61);
+    background: rgba(39, 34, 34, 0.95);
     padding: 90px 0;
     color: white;
 }
@@ -399,25 +399,34 @@ section#love i {
 #footer a {
     color: white;
 }
+#footer h4 {
+    color: skyblue;
+}
+#footer .footer-section{
+    min-height: 350px;
+    padding: 20px 10px;
+    border-radius: 6px;
+    background: rgb(80, 67, 67);
+}
 
-#footer .footer-call-to-action .row {
-    margin: 0;
-    padding: 0;
-}
-#footer .footer-call-to-action .footer-btn-container {
-    margin: 0 !important;
-    padding: 0 !important;
-}
 #footer .footer-call-to-action a.btn {
     border-radius: 3px !important;
+    font-size: 13px !important;
+    width: 100%;
 }
-#footer .footer-call-to-action a[href="/contact"] {
-    margin-left: 5px;
+@media(max-width: 991px) {
+    #footer .footer-section {
+        margin-top: 15px;
+    }
 }
-@media(max-width: 1199px) and (min-width: 992px) {
+@media(min-width: 992px) {
     #footer .footer-call-to-action a[href="/contact"] {
         margin-top: 10px;
-        margin-right: 0;
+    }
+}
+@media(max-width: 1199px) and (min-width: 992px) {
+    #footer .footer-section {
+        height: 405px;
     }
 }
 #footer #footer_form form input {

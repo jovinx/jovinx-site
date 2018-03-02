@@ -159,85 +159,92 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <h4>Services</h4>
+                        <div class="footer-section">
+                            <h4>Services</h4>
                         
-                        <p>
-                            {% for service in services %}
-                            <i class="fa {{service.fontawesome_icon}} fa-fw" aria-hidden="true"></i> <a href="/services/{{ service.pk}}"> {{ service.title }} </a><br>
-                            {% endfor %}
-                        </p>
+                            <p>
+                                {% for service in services %}
+                                <i class="fa {{service.fontawesome_icon}} fa-fw" aria-hidden="true"></i> <a href="/services/{{ service.pk}}"> {{ service.title }} </a><br>
+                                {% endfor %}
+                                <i class="fa fa-arrow-right fa-fw" aria-hidden="true"></i><a style="font-weight: 800; font-size: 11.5px; color: skyblue" href="/services">VIEW ALL</a>
+                            </p>
+                        </div>
+                        
                     </div>
 
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-left ">
+                        <div class="footer-section">
+                            <h4>Jovinx Creative Company</h4>
+                            <p>
+                                <a href="/"> <i class="fa fa-home fa-fw" aria-hidden="true"></i> Home</a><br>
+                                <a href="/services"> <i class="fa fa-gear fa-fw" aria-hidden="true"></i> Sevices</a><br>
+                                <a href="/about"> <i class="fa fa-black-tie fa-fw" aria-hidden="true"></i> About</a><br>
+                                <a href="/contact"> <i class="fa fa-phone-square fa-fw" aria-hidden="true"></i> Contact</a>
+                            </p>
 
-                        <h4>Jovinx</h4>
-                        <p>
-                            <a href="/"> <i class="fa fa-home fa-fw" aria-hidden="true"></i> Home</a><br>
-                            <a href="/services"> <i class="fa fa-gear fa-fw" aria-hidden="true"></i> Sevices</a><br>
-                            <a href="/about"> <i class="fa fa-black-tie fa-fw" aria-hidden="true"></i> About</a><br>
-                            <a href="/contact"> <i class="fa fa-phone-square fa-fw" aria-hidden="true"></i> Contact</a>
-                        </p>
+                            <br>
 
-                        <br>
-
-                        <h4>Social Links</h4>
-                        <p>
-                            <a href="#"> <i class="fa fa-facebook-official fa-fw" aria-hidden="true"></i> Facebook</a><br>
-                            <a href="#"> <i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i> Twitter</a><br>
-                            <a href="#"> <i class="fa fa-instagram fa-fw" aria-hidden="true"></i> Instagram</a></i><br>
-                            <a href="#"> <i class="fa fa-linkedin-square fa-fw" aria-hidden="true"></i> Linkedin</a> 
-                        </p>
+                            <h4>Join Us On Social Media</h4>
+                            <p>
+                                <a href="#"> <i class="fa fa-facebook-official fa-fw" aria-hidden="true"></i> Facebook</a><br>
+                                <a href="#"> <i class="fa fa-twitter-square fa-fw" aria-hidden="true"></i> Twitter</a><br>
+                                <a href="#"> <i class="fa fa-instagram fa-fw" aria-hidden="true"></i> Instagram</a></i><br>
+                                <a href="#"> <i class="fa fa-linkedin-square fa-fw" aria-hidden="true"></i> Linkedin</a> 
+                            </p>
+                        </div>
 
                     </div>
 
 
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 text-left">
-
-                        <h4>Contact Information</h4>
-                    
-                        <p>
-                            <i class="fa fa-phone fa-fw" aria-hidden="true"></i> Phone: {{ jovinx_data.official_phone }}<br>
-                            <i class="fa fa-whatsapp fa-fw" aria-hidden="true"></i> Whatsapp: {{ jovinx_data.whatsapp }}<br>
-                        </p>
-                        <br>
-                        <h4>Official Mails</h4>
+                        <div class="footer-section">
+                            <h4>Contact Information</h4>
                         
-                        <p>
-                            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>Official: <a href="mailto:{{ jovinx_data.official_mail_address }}"> {{ jovinx_data.official_mail_address }}</a><br>
-                            <i class="fa fa-envelope-open fa-fw" aria-hidden="true"></i>Support: <a href="mailto:{{ jovinx_data.support_mail_address }}"> {{ jovinx_data.support_mail_address }}  </a><br>
-                        </p>
-                        <br>
-                        <h4>Location</h4>
-                        
-                        <p> <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> {{jovinx_data.address1}} </p>
-
+                            <p>
+                                <i class="fa fa-phone fa-fw" aria-hidden="true"></i> Phone: {{ jovinx_data.official_phone }}<br>
+                                <i class="fa fa-whatsapp fa-fw" aria-hidden="true"></i> Whatsapp: {{ jovinx_data.whatsapp }}<br>
+                            </p>
+                            <br>
+                            <h4>Official Mails</h4>
+                            
+                            <p>
+                                <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>Official: <a href="mailto:{{ jovinx_data.official_mail_address }}"> {{ jovinx_data.official_mail_address }}</a><br>
+                                <i class="fa fa-envelope-open fa-fw" aria-hidden="true"></i>Support: <a href="mailto:{{ jovinx_data.support_mail_address }}"> {{ jovinx_data.support_mail_address }}  </a><br>
+                            </p>
+                            <br>
+                            <h4>Location</h4>
+                            
+                            <p> <i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> {{jovinx_data.address1}} </p>
+                        </div>
                     </div>
 
                     <div id="footer_form" class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                        <h4 style="line-height: 20px;"></h4>
-                        <section class="footer-call-to-action" id="middle-call-to-action">
+                        <div class="footer-section">
+                            <h4 style="line-height: 20px;"></h4>
+                            <section class="footer-call-to-action" id="middle-call-to-action">
 
-                            <div class="row">
-                                <div class="footer-btn-container col-lg-6 col-md-12 col-sm-6 col-xs-6">
-                                    <a class="btn btn-default btn-block" href="#" data-toggle="modal" data-target="#service_request_modal" >GET A SERVICE</a>
+                                <div class="row">
+                                    <div class="footer-btn-container col-lg-12 col-md-12 col-sm-6 col-xs-6">
+                                        <a class="btn btn-default" href="#" data-toggle="modal" data-target="#service_request_modal" >GET A SERVICE</a>
+                                    </div>
+                                    <div class="footer-btn-container col-lg-12 col-md-12 col-sm-6 col-xs-6">
+                                        <a class="btn btn-default" href="/contact">CONTACT US</a>
+                                    </div>
                                 </div>
-                                <div class="footer-btn-container col-lg-6 col-md-12 col-sm-6 col-xs-6">
-                                    <a class="btn btn-default btn-block" href="/contact">CONTACT US</a>
+
+                            </section>
+
+                            <br>
+                            <h4>Subscribe To Our NewsLetter</h4>
+                            <p>Be the first to learn about our Promotion offers, Job Vacancies, Coding Classes & Events</p>
+
+                            <form action="/news_letter_subscription" method="POST">
+                                <div class="form-group">                               
+                                    <input id="user_email" name="user_email" type="text" class="form-control" placeholder="Enter your email">
+                                    <button style="margin-top: 10px;" type="submit" class="btn btn-primary btn-block"> SUBSCRIBE </button>
                                 </div>
-                            </div>
-
-                        </section>
-
-                        <br>
-                        <h4>Subscribe To Our NewsLetter</h4>
-                        <p>Be the first to learn about our Promotion offers, Job Vacancies, Coding Classes & Events</p>
-
-                        <form action="/news_letter_subscription" method="POST">
-                            <div class="form-group">                               
-                                <input id="user_email" name="user_email" type="text" class="form-control" placeholder="Enter your email">
-                                <button style="margin-top: 10px;" type="submit" class="btn btn-primary btn-block"> SUBSCRIBE </button>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
 
                 </div>
