@@ -11,6 +11,7 @@
 {% endblock page_css %}
 
 
+    
 
 <!--header-->
 {% block header %}
@@ -80,12 +81,12 @@
 
     
 
-    <header id="header" >
+    <header id="header">
         <div class="container">
             <div class="row" >
                 <div id="header-text" class="col-lg-5 col-md-5 col-sm-6 col-xs-9">
                     <h2>Welcome to Jovinx</h2>
-                    <p>Because Django was developed in a fast-paced newsroom environment, it was designed to make common Webdevelopment</p>
+                    <p>Get Online, Design your concepts and ideas, market, learn and achieve your goals with Jovinx Creative Company.</p>
                     
                     <div class="header-btns">
                         <a class="btn btn-default" href="/services">OUR SERVICES</a>
@@ -121,12 +122,16 @@
         </div>
     </section>
 
+    
+    
+        
+
     <section id="services">
         <div class="container">
             <div class="row">
                 <div class=" text-center col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                     <h3>OUR SERVICES</h3>
-                    <p>We render world class <span><a  style="color: dodgerblue" href="/services"> Services </a></span> that promote your businesses, put you on the cutting edge and yield result</p>
+                    <p>We render a wide range of world class IT based<span><a  style="color: dodgerblue" href="/services"> Services </a></span> to help you achieve your business and personal goals</p>
                 </div>
             </div>
 
@@ -144,7 +149,7 @@
                                 <p>{{service.description | truncatechars:80}}</p>
                                 
                                 <div class="btn-container text-center">
-                                    <button data-info="{{service.description}} " data-icon="{{service.fontawesome_icon}} " data-img-url="{{service.image_url}} " data-title="{{service.title}}" data-subservices="{{service.sub_services}}" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#service_detail_modal"> <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i> View</button>
+                                    <button data-info="{{service.description}} " data-icon="{{service.fontawesome_icon}} " data-img-url="{{service.image_url}} " data-title="{{service.title}}" data-subservices="{{service.sub_services}}" class="btn btn-primary btn-sm service-btn" data-toggle="modal" data-target="#service_detail_modal"> <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i> View</button>
                                 </div>
                             </div>
                         </li>
@@ -173,7 +178,7 @@
             <div class="row">
                 <div class=" text-center col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                     <h3>WHY JOVINX</h3>
-                    <p>Here are the numerous reasons why you should be Glad to trust and work with us</p>
+                    <p>Here are the remarkable reasons why you should be glad to trust and work with us</p>
                 </div>
             </div>
 
@@ -240,6 +245,7 @@
             <div class="row">
                 <div class=" text-center col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                     <h3>TESTIMONIES</h3>
+                    <p>Hear from a few amongst our many fulfilled and happy clients</p>
                 </div>
             </div>
 

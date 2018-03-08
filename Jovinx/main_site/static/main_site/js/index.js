@@ -36,7 +36,7 @@ $(document).ready(function() {
         $(this).parent().prev().trigger('owl.next');
     })
 
-    $('#services #service-slide .item .btn-container button').click(function() {
+    $('#services #service-slide .item .btn-container button.service-btn').click(function() {
         var title = $(this).data('title');
         var description = $(this).data('info');
         var icon = $(this).data('icon');

@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="{% static 'main_site/css/service_detail.css' %}">
 {% endblock page_css %}
 
+{% block pageurl %}
+    "/services/{{service_info.pk}}"
+{% endblock pageurl %}
+
+{% block pageurl2 %}
+    "/services/{{service_info.pk}}"
+{% endblock pageurl2 %}
+
 {% block content %}
     <section id="service_detail">
         <div class="container">

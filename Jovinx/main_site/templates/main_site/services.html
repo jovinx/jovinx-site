@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="{% static 'main_site/css/services.css' %}">
 {% endblock page_css %}
 
+{% block pageurl %}
+    "/services"
+{% endblock pageurl %}
+
+{% block pageurl2 %}
+    "/services"
+{% endblock pageurl2 %}
+
+
 {% block header %}
 
 {% endblock header %}
@@ -76,7 +85,7 @@
                         </div>
 
                         <div class="btn-container text-center">
-                            <button data-info="{{service.description}} " data-icon="{{service.fontawesome_icon}} " data-img-url="{{service.image_url}} " data-title="{{service.title}}" data-subservices="{{service.sub_services}}" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#service_detail_modal"> <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i> View</button>
+                            <button data-info="{{service.description}} " data-icon="{{service.fontawesome_icon}} " data-img-url="{{service.image_url}} " data-title="{{service.title}}" data-subservices="{{service.sub_services}}" class="btn btn-primary btn-sm service-btn" data-toggle="modal" data-target="#service_detail_modal"> <i class="fa fa-folder-open fa-fw" aria-hidden="true"></i> View</button>
                         </div>
 
                     </div>

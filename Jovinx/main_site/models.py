@@ -2,7 +2,14 @@
 from django.db import models
 from jsonfield import JSONField
 
-# Create your models here.
+# Create your models here
+class MailSubscriber(models.Model):
+    user_email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.user_email
+
+
 
 class JovinxInfo(models.Model):
     founder = models.CharField(max_length=100, editable=False, default='John Obi Chinemerem')
@@ -137,7 +144,7 @@ class MotionGraphicsGallery(models.Model):
   
 class WhyJovinx(models.Model):
     title = models.CharField(max_length=30)
-    description = models.TextField(max_length=100)
+    description = models.TextField(max_length=150)
 
     def __str__(self):
         return self.title
@@ -147,7 +154,7 @@ class Message(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone = models.BigIntegerField()
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     message = models.TextField()
     received_date = models.DateTimeField(auto_now_add=True)
 
@@ -166,7 +173,7 @@ class ServiceRequest(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone = models.BigIntegerField()
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
     service_requested = models.CharField(max_length=200, choices=SERVICE_LIST)
     specifications = models.TextField(blank=True, null=True)
     received_date = models.DateTimeField(auto_now_add=True)

@@ -24,7 +24,20 @@
 </head>
 <body>
 
-    <!--ASK QUESTION MODAL POP-UP-->
+    {% if messages %}
+        <div class="flash_messages animated zoomInDown">
+            <ul class="messages">
+                {% for message in messages %}
+                    <li 
+                    {% if message.tags %} class="{{message.tags}}" {% endif %} > <i class="fa fa-check-circle" aria-hidden="true"></i> {{message}}</li>
+                {% endfor %}
+            </ul>
+            
+            <button class="btn btn-primary btn-sm">CLOSE</button>
+        </div>
+    {% endif %}
+
+    <!--SERVICE REQUEST MODAL POP-UP-->
     <div id="service_request_modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -32,7 +45,7 @@
                     <button type="button" class="close" data-dismiss="modal" arial-lable="Close">
                         <span arial-hidden="true">&times</span>
                     </button>
-                    <h4 class="modal-title text-center">SERVICE REQUEST FORM</h4>
+                    <h5 class="modal-title text-center">SERVICE REQUEST FORM</h5>
                 </div>
 
                 <div class="modal-body">
@@ -84,6 +97,8 @@
                                 </div>
                             </div>
 
+                            <input type="hidden" name="next" value={% block pageurl2 %} "/" {% endblock pageurl2 %} >
+
                             <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <button class="btn btn-primary" type="submit">REQUEST<i class="fa fa-send fa-fw" aria-hidden="true"></i></button>
                             </div>
@@ -95,6 +110,8 @@
             </div>
         </div>
     </div>
+
+    
 
     {% block nav %}
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -124,7 +141,7 @@
                             </ul>
                         </li>
                         <li class="{{ about_active }}"><a href="/about">About</a></li>
-                        <li ><a  href="/contact"> <i class="fa fa-phone fa-fw" aria-hidden="true"></i> Contact</a></li>
+                        <li ><a  href="/contact"> <i class="fa fa-phone fa-fw animated flash infinite" aria-hidden="true"></i> Contact</a></li>
                     </ul>
                 </div>
 
@@ -239,8 +256,10 @@
                             <p>Be the first to learn about our Promotion offers, Job Vacancies, Coding Classes & Events</p>
 
                             <form action="/news_letter_subscription" method="POST">
+                                {% csrf_token %}
                                 <div class="form-group">                               
-                                    <input id="user_email" name="user_email" type="text" class="form-control" placeholder="Enter your email">
+                                    <input id="user_email" name="user_email" type="email" required class="form-control" placeholder="Enter your email">
+                                    <input type="hidden" name="next" value={% block pageurl %} "/" {% endblock pageurl %} >
                                     <button style="margin-top: 10px;" type="submit" class="btn btn-primary btn-block"> SUBSCRIBE </button>
                                 </div>
                             </form>
@@ -273,6 +292,7 @@
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/owl-carousel.js' %}"></script>
+    <script src="{% static 'main_site/js/base.js' %}"></script>
     {% block page_js %}
         <script src="{% static 'main_site/js/base.js' %}"></script>
     {% endblock page_js %}

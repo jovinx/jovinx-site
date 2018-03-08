@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#service-list .container .row .thumbnail .btn-container button').click(function() {
+    $('#service-list .container .row .thumbnail .btn-container button.service-btn').click(function() {
         var title = $(this).data('title');
         var description = $(this).data('info');
         var icon = $(this).data('icon');

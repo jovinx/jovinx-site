@@ -32,9 +32,11 @@ body {
     font-size: 14px;
     border-color: rgb(255, 111, 58);
 }
+header #header-text {
+    margin-top: 100px !important;
+}
 header#header  {
     position: relative;
-
 }
 header #opening-hours {
     position: absolute;
@@ -65,4 +67,10 @@ section#forms {
 
 #forms #contact-btns {
     margin-top: 50px;
+}
+@media(max-width: 340px) {
+   #forms #contact-btns a {
+        font-size: 13px;
+        line-height: 1.5;
+    } 
 }

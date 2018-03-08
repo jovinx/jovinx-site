@@ -27,6 +27,51 @@ div{
     background: rgb(255, 111, 58);
 }
 
+/*Flash messages styles*/
+div.flash_messages {
+    position: absolute;
+    width: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 30px auto 0;
+    border-radius: 3px;
+    background: white;
+    z-index: 1000000;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 10px 10px;  
+    text-align: center;
+}
+div.flash_messages button.btn-primary {
+    color: white;
+    background: dodgerblue;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+div.flash_messages button.btn-primary:hover {
+    background: transparent;
+    border-color: dodgerblue;
+    color: dodgerblue;
+}
+div.flash_messages ul {
+    width: 100%;
+    padding: 0;
+    margin: 10px 0 20px 0;
+}
+div.flash_messages ul li {
+    list-style: none;
+    font-size: 16px;
+}
+div.flash_messages ul li.success {
+    color: rgb(6, 172, 6);    
+}
+div.flash_messages ul li.info {
+    color: goldenrod;    
+}
+div.flash_messages ul li.error {
+    color: rgb(255, 52, 6);    
+}
 /*header styles*/
 header {
     color: white;
@@ -35,12 +80,15 @@ header {
     background: rgb(3, 26, 97);
     height: 450px;
     width: 100%;
+    background-image: url('/static/images/jovinx landing page2.png');
+    background-position: center;
+    background-size: cover;
 }
 header #header-text {
-    margin-top: 120px !important;
+    margin-top: 100px !important;
     padding-left: 15px;
     border-radius: 5px;
-
+    zoom: 98%;
 }
 
 header #header-text h2 {
