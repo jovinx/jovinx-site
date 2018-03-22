@@ -255,10 +255,15 @@
                             <h4>Subscribe To Our NewsLetter</h4>
                             <p>Be the first to learn about our Promotion offers, Job Vacancies, Coding Classes & Events</p>
 
-                            <form action="/news_letter_subscription" method="POST">
+                            <form action="/news_letter_subscription" method="POST" >
                                 {% csrf_token %}
-                                <div class="form-group">                               
-                                    <input id="user_email" name="user_email" type="email" required class="form-control" placeholder="Enter your email">
+                                <div class="form-group">
+                                    <ul>
+                                    {% for error in news_letter_form.user_email.errors %}
+                                        <li>error</li>
+                                    {% endfor %}
+                                    </ul>              
+                                    {{news_letter_form.user_email}}         
                                     <input type="hidden" name="next" value={% block pageurl %} "/" {% endblock pageurl %} >
                                     <button style="margin-top: 10px;" type="submit" class="btn btn-primary btn-block"> SUBSCRIBE </button>
                                 </div>

@@ -81,7 +81,7 @@ header {
     height: 450px;
     width: 100%;
     background-image: url('/static/images/jovinx landing page2.png');
-    background-position: center;
+    background-position: right;
     background-size: cover;
 }
 header #header-text {
@@ -346,6 +346,7 @@ nav.navbar {
     padding-bottom: 6px;
     margin-top: 16px;
     background: dodgerblue;
+    background-image: linear-gradient(to right, royalblue %, dodgerblue 100%);
     color: white;
     border: 0;
     border-radius: 22px;

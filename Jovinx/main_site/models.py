@@ -154,7 +154,7 @@ class Message(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone = models.BigIntegerField()
-    email = models.EmailField(unique=True)
+    email = models.EmailField(unique=False)
     message = models.TextField()
     received_date = models.DateTimeField(auto_now_add=True)
 
@@ -173,7 +173,7 @@ class ServiceRequest(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     phone = models.BigIntegerField()
-    email = models.EmailField(unique=True)
+    email = models.EmailField(unique=False)
     service_requested = models.CharField(max_length=200, choices=SERVICE_LIST)
     specifications = models.TextField(blank=True, null=True)
     received_date = models.DateTimeField(auto_now_add=True)

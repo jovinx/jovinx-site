@@ -1,7 +1,7 @@
 
 from django import forms
 from django.forms import ModelForm
-from .models import Message, ServiceRequest, Service
+from .models import Message, ServiceRequest, Service, MailSubscriber
 
 
 class ServiceRequstForm(ModelForm):
@@ -26,9 +26,6 @@ class ServiceRequstForm(ModelForm):
 
 
 class MessageForm(ModelForm):
-
-    
-    
     first_name = forms.CharField(label='First Name', max_length=50, widget=forms.TextInput(attrs={ 'class':'form-control', 'placeholder':'First Name' }))
     last_name = forms.CharField(label='Last Name', max_length=50, widget=forms.TextInput(attrs={ 'class':'form-control', 'placeholder':'Last Name' }))
     phone = forms.IntegerField(label='Phone', widget=forms.NumberInput(attrs={ 'class': 'form-control', 'placeholder': 'Phone'}))
@@ -39,3 +36,11 @@ class MessageForm(ModelForm):
         model = Message
         fields = ['first_name','last_name','phone','email','message']
 
+
+class NewsLetterForm(ModelForm):
+
+    user_email = forms.EmailField(label='Email', max_length=100, widget=forms.EmailInput(attrs={'class': 'form-control', 'placeholder':'Enter your email'}))
+
+    class Meta:
+        model = MailSubscriber
+        fields = ['user_email']

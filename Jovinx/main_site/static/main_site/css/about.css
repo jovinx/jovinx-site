@@ -13,7 +13,7 @@ section#objectives {
     height: 190px;
     background: white;
     border: 0;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    box-shadow: 3px 5px 12px 1px rgba(0, 0, 0, 0.1);
     position: relative;
 
 }
@@ -71,12 +71,12 @@ section#strategy {
     margin: 50px 0;
 }
 #strategy .slide-wrapper .owl-carousel .item {
-    margin: 10px 13px;
+    margin: 20px 13px;
     height: 130px;
     padding-top: 15px;
     background: white;
     border-radius: 3px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    box-shadow: 3px 5px 12px 1px rgba(0, 0, 0, 0.1);
     z-index: -2;
 }
 #strategy .slide-wrapper .owl-carousel .item h2 {
@@ -120,7 +120,7 @@ section#values {
     border: 0;
     padding-top: 30px;
     height: 200px;
-    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    box-shadow: 3px 5px 12px 1px rgba(0, 0, 0, 0.1);
 }
 #values #value-content .well h3 {
     margin: 0 0 20px 0;
@@ -140,4 +140,27 @@ section#values {
     bottom: 15px;
     left: 0;
     right: 0;
+}
+
+
+
+#our_goal {
+    margin: 30px 0 0;
+    padding: 40px 0;
+    background: rgba(0,0,0, 0.8);
+    color: dodgerblue;
+}
+#our_goal p {
+    color: white;
+}
+
+#about_jovinx {
+    padding: 150px 0 50px;
+}
+#about_jovinx .content {
+    background: white;
+    zoom: 95%; 
+    padding: 20px 15px;
+    border-radius: 5px;
+    box-shadow: 3px 5px 12px 1px rgba(0, 0, 0, 0.1);
 }
